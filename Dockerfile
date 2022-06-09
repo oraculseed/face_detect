@@ -1,10 +1,7 @@
-FROM python:3.8-slim
-
-WORKDIR /usr/src/app
-
+FROM python:3.7
+WORKDIR /app
 COPY requirements.txt .
-RUN pip install -r requirements.txt
-
+RUN pip3 install -r requirements.txt
 COPY . .
-
-CMD [ "uvicorn tst:app --reload --port 8089 --host 0.0.0.0" ]
+ENTRYPOINT ./docker-starter.sh
+EXPOSE 8089
