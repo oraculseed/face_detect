@@ -40,7 +40,8 @@ def root_route():
 
 @app.post('/prediction/', response_model=Prediction)
 async def prediction_route(content: Content):
-
+    
+    face = False
     try:
         
         img_content = str(content).split("content=")[1].replace("'","")        
