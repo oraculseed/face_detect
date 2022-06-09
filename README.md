@@ -2,3 +2,4 @@
 Start
 uvicorn tst:app --reload --port 8089 --host 0.0.0.0
 or
+docker-compose up -d --build
